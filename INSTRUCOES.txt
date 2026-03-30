@@ -1,0 +1,44 @@
+# Instruções para Iniciar o MuscleShops
+
+Como há problemas técnicos com o ambiente, siga estes passos manuais:
+
+## 1. Instalar MongoDB
+```bash
+# Se não tiver MongoDB instalado
+sudo apt update
+sudo apt install mongodb
+sudo systemctl start mongod
+```
+
+## 2. Backend
+```bash
+cd backend
+npm install
+npm run init
+npm run dev
+```
+
+## 3. Frontend (Catálogo Público)
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+## 4. Admin (Dashboard Administrativo)
+```bash
+cd admin
+npm install
+npm run dev
+```
+
+## 5. Acessar
+- **📱 Catálogo Público**: http://localhost:5173
+- **🛠️ Dashboard Admin**: http://localhost:5174
+
+## Problemas Comuns
+- Se "MongoDB connection error": Verifique se MongoDB está rodando
+- Se "command not found": Instale as dependências primeiro
+- Se porta ocupada: Mude PORT no .env (backend) ou vite.config.js (frontend/admin)
+
+Execute um passo de cada vez e verifique os logs!
